@@ -20,8 +20,221 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet" />
+
+    <!-- Main Stylesheet with Cache Buster -->
+    <link rel="stylesheet" href="style.css?v=3.1" />
+
+    <!-- Critical Inlined Resume & Layout Styles (Guarantees Instant Rendering without Cache Issues) -->
+    <style>
+      /* Embedded Resume Sheet Container */
+      .resume-wrapper-container {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      .resume-top-controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: #141422;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 14px;
+        padding: 14px 22px;
+        margin-bottom: 24px;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .resume-control-title {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #ffd500;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-family: 'Space Grotesk', sans-serif;
+      }
+
+      .resume-control-actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .btn-ctrl-primary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 20px;
+        background: linear-gradient(135deg, #ff5800, #c41e3a);
+        color: #ffffff !important;
+        border: none;
+        border-radius: 8px;
+        font: 600 0.88rem 'Space Grotesk', sans-serif;
+        text-decoration: none;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 0 20px rgba(255, 88, 0, 0.4);
+      }
+
+      .btn-ctrl-primary:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 30px rgba(255, 88, 0, 0.6);
+      }
+
+      .btn-ctrl-secondary {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 18px;
+        background: rgba(255, 255, 255, 0.08);
+        color: #e8e8f2 !important;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        font: 600 0.88rem 'Space Grotesk', sans-serif;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .btn-ctrl-secondary:hover {
+        border-color: #ffd500;
+        color: #ffd500 !important;
+        background: rgba(255, 213, 0, 0.1);
+        transform: translateY(-2px);
+      }
+
+      /* The White Paper Resume Sheet */
+      .embedded-resume-sheet {
+        background: #ffffff !important;
+        color: #1a1a24 !important;
+        border-radius: 12px;
+        padding: 50px 55px;
+        box-shadow: 0 20px 70px rgba(0, 0, 0, 0.7);
+        text-align: left;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        border: 1px solid #dfe4ea;
+        box-sizing: border-box;
+      }
+
+      .sheet-header {
+        text-align: center;
+        border-bottom: 2px solid #222;
+        padding-bottom: 14px;
+        margin-bottom: 18px;
+      }
+
+      .sheet-name {
+        font-size: 2.1rem;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: #111118 !important;
+        text-transform: uppercase;
+        margin: 0;
+      }
+
+      .sheet-contacts {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+        font-size: 0.88rem;
+        color: #333344 !important;
+        margin-top: 8px;
+        font-family: 'JetBrains Mono', monospace;
+      }
+
+      .sheet-contacts a {
+        color: #0051a2 !important;
+        text-decoration: none;
+      }
+
+      .sheet-contacts a:hover {
+        text-decoration: underline;
+      }
+
+      .sheet-sec {
+        margin-bottom: 18px;
+      }
+
+      .sheet-sec-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #111118 !important;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 3px;
+        margin-bottom: 8px;
+        letter-spacing: 0.5px;
+      }
+
+      .sheet-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        font-size: 0.95rem;
+        font-weight: 600;
+        color: #111118 !important;
+      }
+
+      .sheet-subrow {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.88rem;
+        font-style: italic;
+        color: #555566 !important;
+        margin-bottom: 6px;
+      }
+
+      .sheet-subrow a {
+        color: #0051a2 !important;
+        text-decoration: none;
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .sheet-subrow a:hover {
+        text-decoration: underline;
+      }
+
+      .sheet-list {
+        padding-left: 20px;
+        margin: 0;
+        font-size: 0.88rem;
+        color: #222233 !important;
+      }
+
+      .sheet-list li {
+        margin-bottom: 4px;
+        line-height: 1.55;
+        list-style: disc !important;
+      }
+
+      .sheet-list strong {
+        color: #111118 !important;
+      }
+
+      .sheet-project-item {
+        margin-bottom: 14px;
+      }
+
+      @media (max-width: 768px) {
+        .embedded-resume-sheet {
+          padding: 28px 20px;
+        }
+        .sheet-contacts {
+          flex-direction: column;
+          gap: 6px;
+        }
+        .sheet-row, .sheet-subrow {
+          flex-direction: column;
+          gap: 2px;
+        }
+      }
+    </style>
 
     <!-- EmailJS SDK -->
     <script
@@ -34,9 +247,6 @@
         }
       })();
     </script>
-
-    <!-- Main Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
@@ -534,7 +744,7 @@
           </div>
         </div>
 
-        <!-- The Clean Embedded Resume Document -->
+        <!-- The Clean Embedded Resume Document Sheet -->
         <div class="embedded-resume-sheet">
           <header class="sheet-header">
             <h1 class="sheet-name">NITIN KUMAR JHA</h1>
@@ -765,6 +975,6 @@
     </footer>
 
     <!-- Main Logic Script -->
-    <script src="script.js"></script>
+    <script src="script.js?v=3.1"></script>
   </body>
 </html>
