@@ -1,0 +1,20 @@
+{
+  "name": "chotusky-dynamic-portfolio",
+  "version": "1.0.0",
+  "description": "Interactive 3D dynamic portfolio for chotusky95-cell with 3D Rubiks cube, DSA lab, and GitHub showcases.",
+  "scripts": {
+    "start": "npx serve .",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "java",
+    "dsa",
+    "algorithms",
+    "3d",
+    "rubiks-cube",
+    "vercel"
+  ],
+  "author": "chotusky95-cell",
+  "license": "MIT"
+}
