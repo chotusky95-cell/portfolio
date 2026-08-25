@@ -91,7 +91,7 @@
         </p>
         <div class="hero-btns">
           <a href="#projects" class="btn-p">Explore Projects &rarr;</a>
-          <a href="#resume" class="btn-s">View Resume 📄</a>
+          <a href="resume.html" target="_blank" class="btn-s">View Resume 📄</a>
           <a href="#contact" class="btn-s">Get In Touch</a>
         </div>
       </div>
@@ -493,329 +493,124 @@
       <div class="pip"></div>
     </div>
 
-    <!-- ════════ RESUME SECTION ════════ -->
+    <!-- ════════ RESUME SHOWCASE SECTION ════════ -->
     <section id="resume">
       <div class="sec-head up">
         <div class="sec-tag">05 &mdash; Credentials &amp; Resume</div>
-        <h2 class="sec-title">Official <span>Resume</span></h2>
-        <p class="sec-sub">Education, Core CS, Project Portfolio &amp; Certifications</p>
+        <h2 class="sec-title">Official <span>Resume &amp; Qualifications</span></h2>
+        <p class="sec-sub">Full academic background, technical competencies, projects &amp; certifications</p>
       </div>
 
-      <div class="resume-box up">
-        <div class="resume-icon">📄</div>
-        <div class="resume-title">NITIN KUMAR JHA</div>
-        <p class="resume-sub">
-          <strong>Rungta College of Engineering and Technology (CSVTU)</strong><br />
-          B.Tech, Computer Science &amp; Engineering (Data Science) &bull; 2024 &ndash; 2028 &bull; Bhilai, Chhattisgarh
-        </p>
-
-        <div class="resume-meta">
-          <div class="resume-meta-item">
-            <div class="resume-meta-dot" style="background: var(--green)"></div>
-            📞 +91-7739978325
+      <div class="resume-showcase up">
+        <!-- Top Banner Header -->
+        <div class="resume-top-banner">
+          <div class="resume-header-info">
+            <h3>NITIN KUMAR <span>JHA</span></h3>
+            <p class="resume-degree">
+              🎓 <strong>B.Tech in Computer Science &amp; Engineering (Data Science)</strong><br />
+              🏫 Rungta College of Engineering and Technology (CSVTU) &bull; 2024 &ndash; 2028 &bull; Bhilai, Chhattisgarh
+            </p>
           </div>
-          <div class="resume-meta-item">
-            <div class="resume-meta-dot" style="background: var(--yellow)"></div>
-            ✉️ nitink89506@gmail.com
-          </div>
-          <div class="resume-meta-item">
-            <div class="resume-meta-dot" style="background: var(--cyan)"></div>
-            💼 LinkedIn Verified
+          <div class="resume-top-actions">
+            <a href="resume.html" target="_blank" class="btn-resume-main">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+              Open Printable Resume ↗
+            </a>
+            <a href="resume.html" target="_blank" class="btn-resume-sec">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              Print / Save PDF
+            </a>
           </div>
         </div>
 
-        <div class="resume-actions">
-          <button id="btnOpenResume" onclick="openResumeModal(event)" class="btn-resume">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-              <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-            View Full Resume
-          </button>
-          <button id="btnToggleInline" onclick="toggleInlineResume(event)" class="btn-resume-outline">
-            Expand On Page ▼
-          </button>
-          <button onclick="window.print()" class="btn-resume-outline">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-            Print / Save PDF
-          </button>
+        <!-- Verified Contact Pills -->
+        <div class="resume-pills">
+          <a href="tel:+917739978325" class="r-pill">📞 +91-7739978325</a>
+          <a href="mailto:nitink89506@gmail.com" class="r-pill">✉️ nitink89506@gmail.com</a>
+          <a href="https://github.com/chotusky95-cell" target="_blank" class="r-pill">🐙 github.com/chotusky95-cell</a>
+          <a href="https://linkedin.com/in/nitin-kumar-jha-69469b326" target="_blank" class="r-pill">💼 linkedin.com/in/nitin-kumar-jha-69469b326</a>
         </div>
 
-        <!-- Inline Expandable Resume Card -->
-        <div id="resumeInlinePreview" class="resume-inline-preview">
-          <div class="resume-document">
-            <header class="doc-header">
-              <h1 class="doc-name">NITIN KUMAR JHA</h1>
-              <div class="doc-contacts">
-                <span>📞 +91-7739978325</span>
-                <span>✉️ <a href="mailto:nitink89506@gmail.com">nitink89506@gmail.com</a></span>
-                <span>🐙 <a href="https://github.com/chotusky95-cell" target="_blank">github.com/chotusky95-cell</a></span>
-                <span>💼 <a href="https://linkedin.com/in/nitin-kumar-jha-69469b326" target="_blank">linkedin.com/in/nitin-kumar-jha-69469b326</a></span>
-              </div>
-            </header>
+        <!-- Grid of 4 Core Resume Modules -->
+        <div class="resume-grid">
+          <!-- Module 1: Technical Skills -->
+          <div class="r-card">
+            <div class="r-card-title">🛠️ Technical Skills</div>
+            <ul class="r-list">
+              <li><strong>Languages:</strong> Java, Python, SQL, JavaScript, HTML, CSS</li>
+              <li><strong>Data Analysis:</strong> Pandas, NumPy, Matplotlib, Data Cleaning, Visualization</li>
+              <li><strong>Database:</strong> MySQL, SQL Queries, Schema Design</li>
+              <li><strong>Web Dev:</strong> HTML5, CSS3, JavaScript (ES6+), Responsive UI</li>
+              <li><strong>Tools:</strong> Git, GitHub, VS Code, Jupyter Notebook</li>
+            </ul>
+          </div>
 
-            <section class="doc-sec">
-              <h2 class="doc-sec-title">Education</h2>
-              <div class="doc-row">
-                <span>Rungta College of Engineering and Technology (Data Science)</span>
-                <span>2024 &ndash; 2028</span>
-              </div>
-              <div class="doc-subrow">
-                <span>B.Tech, Computer Science &amp; Engineering &mdash; CSVTU</span>
-                <span>Bhilai, Chhattisgarh</span>
-              </div>
-            </section>
+          <!-- Module 2: Core Computer Science -->
+          <div class="r-card">
+            <div class="r-card-title">🧠 Core CS &amp; Algorithms</div>
+            <ul class="r-list">
+              <li><strong>Data Structures:</strong> Linked Lists (Singly/Doubly/Circular), Trees, BSTs</li>
+              <li><strong>Algorithms:</strong> Sorting, Binary Search, Recursion, Two Pointers</li>
+              <li><strong>Software Engineering:</strong> Object-Oriented Programming (OOP)</li>
+              <li><strong>Systems:</strong> DBMS, Operating Systems, Computer Networks</li>
+              <li><strong>Problem Solving:</strong> Competitive Programming &amp; Math Analytics</li>
+            </ul>
+          </div>
 
-            <section class="doc-sec">
-              <h2 class="doc-sec-title">Technical Skills</h2>
-              <ul class="doc-list">
-                <li><strong>Languages:</strong> Java, Python, SQL, JavaScript, HTML, CSS</li>
-                <li><strong>Data Analysis:</strong> Pandas, NumPy, Matplotlib, Data Cleaning, Data Visualization</li>
-                <li><strong>Database:</strong> MySQL, SQL Queries</li>
-                <li><strong>Web Development:</strong> HTML, CSS, JavaScript, Responsive Web Design</li>
-                <li><strong>Tools:</strong> Git, GitHub, VS Code, Jupyter Notebook</li>
-                <li><strong>Core CS:</strong> Data Structures and Algorithms, OOP, DBMS, Operating Systems, Computer Networks</li>
-              </ul>
-            </section>
-
-            <section class="doc-sec">
-              <h2 class="doc-sec-title">Projects</h2>
-              <div class="doc-item">
-                <div class="doc-row">
-                  <span><strong>Supply Chain Bottleneck &amp; Efficiency Analyzer</strong></span>
-                  <span>Python, Pandas, Data Analysis</span>
-                </div>
-                <div class="doc-subrow">
-                  <span><a href="https://github.com/chotusky95-cell/Supply-Chain-Bottleneck-Efficiency-Analyzer" target="_blank">GitHub Repository</a></span>
-                </div>
-                <ul class="doc-list">
-                  <li>Analyzed supply chain datasets to identify operational bottlenecks and inefficiencies.</li>
-                  <li>Performed data cleaning, preprocessing, and visualization using Python libraries.</li>
-                  <li>Generated insights to improve workflow efficiency and resource utilization.</li>
-                </ul>
+          <!-- Module 3: Key Projects Highlight -->
+          <div class="r-card">
+            <div class="r-card-title">🚀 Featured Projects</div>
+            <div class="r-project-item">
+              <div class="r-proj-head">
+                <span>Supply Chain Bottleneck Analyzer</span>
+                <span class="r-proj-tech">Python &bull; Pandas</span>
               </div>
-
-              <div class="doc-item">
-                <div class="doc-row">
-                  <span><strong>Student Marks Analysis</strong></span>
-                  <span>Python, Pandas, Matplotlib</span>
-                </div>
-                <div class="doc-subrow">
-                  <span><a href="https://github.com/chotusky95-cell/Student-Marks-Analysis" target="_blank">GitHub Repository</a></span>
-                </div>
-                <ul class="doc-list">
-                  <li>Analyzed student academic performance using statistical techniques.</li>
-                  <li>Created visualizations and reports to evaluate subject-wise performance.</li>
-                  <li>Derived meaningful insights from educational datasets.</li>
-                </ul>
+              <div class="r-proj-desc">
+                Identified operational inefficiencies in supply chains using Python analytics &amp; visualization.
               </div>
-
-              <div class="doc-item">
-                <div class="doc-row">
-                  <span><strong>Cricket Data Ranking System</strong></span>
-                  <span>Python, Data Analysis</span>
-                </div>
-                <div class="doc-subrow">
-                  <span><a href="https://github.com/chotusky95-cell/Cricket-data-ranking" target="_blank">GitHub Repository</a></span>
-                </div>
-                <ul class="doc-list">
-                  <li>Developed a ranking system for cricket players based on performance metrics.</li>
-                  <li>Processed and analyzed match datasets for comparative evaluation.</li>
-                  <li>Applied data-driven techniques to generate rankings.</li>
-                </ul>
+            </div>
+            <div class="r-project-item">
+              <div class="r-proj-head">
+                <span>Cricket Data Ranking System</span>
+                <span class="r-proj-tech">Python &bull; Analytics</span>
               </div>
-
-              <div class="doc-item">
-                <div class="doc-row">
-                  <span><strong>Amazon Clone</strong></span>
-                  <span>HTML, CSS, JavaScript</span>
-                </div>
-                <div class="doc-subrow">
-                  <span><a href="https://github.com/chotusky95-cell/Amazon-Clone" target="_blank">GitHub Repository</a></span>
-                </div>
-                <ul class="doc-list">
-                  <li>Built a responsive Amazon-inspired e-commerce website interface.</li>
-                  <li>Implemented navigation, product sections, and responsive layouts.</li>
-                  <li>Improved frontend development skills through UI replication.</li>
-                </ul>
+              <div class="r-proj-desc">
+                Built ranking algorithms evaluating batsmen &amp; bowlers across international match datasets.
               </div>
-
-              <div class="doc-item">
-                <div class="doc-row">
-                  <span><strong>Crime Data Analysis</strong></span>
-                  <span>Python, Pandas, Data Visualization</span>
-                </div>
-                <div class="doc-subrow">
-                  <span><a href="https://github.com/chotusky95-cell/Crime-Data-Analysis" target="_blank">GitHub Repository</a></span>
-                </div>
-                <ul class="doc-list">
-                  <li>Explored crime datasets to identify trends and patterns.</li>
-                  <li>Created visual reports and statistical summaries for interpretation.</li>
-                  <li>Generated insights through data analysis and visualization.</li>
-                </ul>
+            </div>
+            <div class="r-project-item">
+              <div class="r-proj-head">
+                <span>Amazon Clone &amp; UI Replicas</span>
+                <span class="r-proj-tech">HTML &bull; CSS &bull; JS</span>
               </div>
-            </section>
+              <div class="r-proj-desc">
+                Engineered responsive multi-page e-commerce interface with product grids &amp; cart workflows.
+              </div>
+            </div>
+          </div>
 
-            <section class="doc-sec">
-              <h2 class="doc-sec-title">Certifications</h2>
-              <ul class="doc-list">
-                <li>Data Science and AI/ML Certification</li>
-                <li>Java Programming Certification</li>
-                <li>Generative AI Fundamentals</li>
-                <li>Problem Solving and Data Structures</li>
-              </ul>
-            </section>
+          <!-- Module 4: Certifications & Interests -->
+          <div class="r-card">
+            <div class="r-card-title">🏆 Certifications &amp; Domains</div>
+            <ul class="r-list">
+              <li><strong>Cert:</strong> Data Science and AI/ML Certification</li>
+              <li><strong>Cert:</strong> Java Programming Certification</li>
+              <li><strong>Cert:</strong> Generative AI Fundamentals</li>
+              <li><strong>Cert:</strong> Problem Solving and Data Structures</li>
+              <li><strong>Interests:</strong> Data Analytics, Software Development, Machine Learning</li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- ════════ RESUME POPUP MODAL VIEWER ════════ -->
-    <div id="resumeModal" class="resume-modal" role="dialog" aria-modal="true" aria-label="Nitin Kumar Jha Resume">
-      <div class="resume-modal-content">
-        <button id="btnCloseResume" onclick="closeResumeModal(event)" class="close-modal" aria-label="Close Resume">&times;</button>
-        
-        <div class="modal-header-actions">
-          <button onclick="window.print()" class="btn-print">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 6 2 18 2 18 9"></polyline>
-              <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
-              <rect x="6" y="14" width="12" height="8"></rect>
-            </svg>
-            Print / Save PDF
-          </button>
-        </div>
-
-        <div class="resume-document">
-          <header class="doc-header">
-            <h1 class="doc-name">NITIN KUMAR JHA</h1>
-            <div class="doc-contacts">
-              <span>📞 +91-7739978325</span>
-              <span>✉️ <a href="mailto:nitink89506@gmail.com">nitink89506@gmail.com</a></span>
-              <span>🐙 <a href="https://github.com/chotusky95-cell" target="_blank">github.com/chotusky95-cell</a></span>
-              <span>💼 <a href="https://linkedin.com/in/nitin-kumar-jha-69469b326" target="_blank">linkedin.com/in/nitin-kumar-jha-69469b326</a></span>
-            </div>
-          </header>
-
-          <section class="doc-sec">
-            <h2 class="doc-sec-title">Education</h2>
-            <div class="doc-row">
-              <span>Rungta College of Engineering and Technology (Data Science)</span>
-              <span>2024 &ndash; 2028</span>
-            </div>
-            <div class="doc-subrow">
-              <span>B.Tech, Computer Science &amp; Engineering &mdash; CSVTU</span>
-              <span>Bhilai, Chhattisgarh</span>
-            </div>
-          </section>
-
-          <section class="doc-sec">
-            <h2 class="doc-sec-title">Technical Skills</h2>
-            <ul class="doc-list">
-              <li><strong>Languages:</strong> Java, Python, SQL, JavaScript, HTML, CSS</li>
-              <li><strong>Data Analysis:</strong> Pandas, NumPy, Matplotlib, Data Cleaning, Data Visualization</li>
-              <li><strong>Database:</strong> MySQL, SQL Queries</li>
-              <li><strong>Web Development:</strong> HTML, CSS, JavaScript, Responsive Web Design</li>
-              <li><strong>Tools:</strong> Git, GitHub, VS Code, Jupyter Notebook</li>
-              <li><strong>Core CS:</strong> Data Structures and Algorithms, OOP, DBMS, Operating Systems, Computer Networks</li>
-            </ul>
-          </section>
-
-          <section class="doc-sec">
-            <h2 class="doc-sec-title">Projects</h2>
-            
-            <div class="doc-item">
-              <div class="doc-row">
-                <span><strong>Supply Chain Bottleneck &amp; Efficiency Analyzer</strong></span>
-                <span>Python, Pandas, Data Analysis</span>
-              </div>
-              <div class="doc-subrow">
-                <span><a href="https://github.com/chotusky95-cell/Supply-Chain-Bottleneck-Efficiency-Analyzer" target="_blank">GitHub Repository</a></span>
-              </div>
-              <ul class="doc-list">
-                <li>Analyzed supply chain datasets to identify operational bottlenecks and inefficiencies.</li>
-                <li>Performed data cleaning, preprocessing, and visualization using Python libraries.</li>
-                <li>Generated insights to improve workflow efficiency and resource utilization.</li>
-              </ul>
-            </div>
-
-            <div class="doc-item">
-              <div class="doc-row">
-                <span><strong>Student Marks Analysis</strong></span>
-                <span>Python, Pandas, Matplotlib</span>
-              </div>
-              <div class="doc-subrow">
-                <span><a href="https://github.com/chotusky95-cell/Student-Marks-Analysis" target="_blank">GitHub Repository</a></span>
-              </div>
-              <ul class="doc-list">
-                <li>Analyzed student academic performance using statistical techniques.</li>
-                <li>Created visualizations and reports to evaluate subject-wise performance.</li>
-                <li>Derived meaningful insights from educational datasets.</li>
-              </ul>
-            </div>
-
-            <div class="doc-item">
-              <div class="doc-row">
-                <span><strong>Cricket Data Ranking System</strong></span>
-                <span>Python, Data Analysis</span>
-              </div>
-              <div class="doc-subrow">
-                <span><a href="https://github.com/chotusky95-cell/Cricket-data-ranking" target="_blank">GitHub Repository</a></span>
-              </div>
-              <ul class="doc-list">
-                <li>Developed a ranking system for cricket players based on performance metrics.</li>
-                <li>Processed and analyzed match datasets for comparative evaluation.</li>
-                <li>Applied data-driven techniques to generate rankings.</li>
-              </ul>
-            </div>
-
-            <div class="doc-item">
-              <div class="doc-row">
-                <span><strong>Amazon Clone</strong></span>
-                <span>HTML, CSS, JavaScript</span>
-              </div>
-              <div class="doc-subrow">
-                <span><a href="https://github.com/chotusky95-cell/Amazon-Clone" target="_blank">GitHub Repository</a></span>
-              </div>
-              <ul class="doc-list">
-                <li>Built a responsive Amazon-inspired e-commerce website interface.</li>
-                <li>Implemented navigation, product sections, and responsive layouts.</li>
-                <li>Improved frontend development skills through UI replication.</li>
-              </ul>
-            </div>
-
-            <div class="doc-item">
-              <div class="doc-row">
-                <span><strong>Crime Data Analysis</strong></span>
-                <span>Python, Pandas, Data Visualization</span>
-              </div>
-              <div class="doc-subrow">
-                <span><a href="https://github.com/chotusky95-cell/Crime-Data-Analysis" target="_blank">GitHub Repository</a></span>
-              </div>
-              <ul class="doc-list">
-                <li>Explored crime datasets to identify trends and patterns.</li>
-                <li>Created visual reports and statistical summaries for interpretation.</li>
-                <li>Generated insights through data analysis and visualization.</li>
-              </ul>
-            </div>
-          </section>
-
-          <section class="doc-sec">
-            <h2 class="doc-sec-title">Certifications</h2>
-            <ul class="doc-list">
-              <li>Data Science and AI/ML Certification</li>
-              <li>Java Programming Certification</li>
-              <li>Generative AI Fundamentals</li>
-              <li>Problem Solving and Data Structures</li>
-            </ul>
-          </section>
-        </div>
-      </div>
-    </div>
 
     <!-- DIVIDER PIPS -->
     <div class="pips" style="background: var(--bg)">

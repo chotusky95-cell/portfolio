@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nitin Kumar Jha - Resume</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0e0e18;
+      color: #1a1a24;
+      line-height: 1.5;
+      padding: 30px 15px;
+    }
+
+    .toolbar {
+      max-width: 820px;
+      margin: 0 auto 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #1e1e2f;
+      color: #fff;
+      padding: 14px 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .toolbar h2 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffd500;
+    }
+
+    .toolbar-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn-action {
+      background: #ff5800;
+      color: #fff;
+      border: none;
+      padding: 9px 20px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.2s;
+    }
+
+    .btn-action:hover {
+      background: #e04e00;
+    }
+
+    .btn-back {
+      background: rgba(255,255,255,0.12);
+    }
+
+    .btn-back:hover {
+      background: rgba(255,255,255,0.22);
+    }
+
+    .resume-sheet {
+      max-width: 820px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 50px 55px;
+      border-radius: 10px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    }
+
+    .doc-header {
+      text-align: center;
+      border-bottom: 2px solid #222;
+      padding-bottom: 14px;
+      margin-bottom: 20px;
+    }
+
+    .doc-name {
+      font-size: 2.1rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #111;
+      text-transform: uppercase;
+    }
+
+    .doc-contacts {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      font-size: 0.88rem;
+      color: #444;
+      margin-top: 8px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .doc-contacts a {
+      color: #0051a2;
+      text-decoration: none;
+    }
+
+    .doc-contacts a:hover {
+      text-decoration: underline;
+    }
+
+    .sec-block {
+      margin-bottom: 18px;
+    }
+
+    .sec-heading {
+      font-size: 1.05rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #111;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .row-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #111;
+    }
+
+    .row-sub {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      font-style: italic;
+      color: #555;
+      margin-bottom: 6px;
+    }
+
+    .row-sub a {
+      color: #0051a2;
+      text-decoration: none;
+      font-style: normal;
+      font-weight: 500;
+    }
+
+    .bullet-list {
+      padding-left: 20px;
+      font-size: 0.88rem;
+      color: #333;
+    }
+
+    .bullet-list li {
+      margin-bottom: 4px;
+      line-height: 1.55;
+    }
+
+    .bullet-list strong {
+      color: #111;
+    }
+
+    .project-entry {
+      margin-bottom: 14px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .toolbar {
+        display: none !important;
+      }
+      .resume-sheet {
+        box-shadow: none;
+        padding: 15px 20px;
+        max-width: 100%;
+      }
+      @page {
+        margin: 10mm 15mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <h2>📄 Nitin Kumar Jha &bull; Official Resume</h2>
+    <div class="toolbar-actions">
+      <a href="index.html" class="btn-action btn-back">&larr; Back to Portfolio</a>
+      <button onclick="window.print()" class="btn-action">🖨️ Print / Save as PDF</button>
+    </div>
+  </div>
+
+  <div class="resume-sheet">
+    <header class="doc-header">
+      <h1 class="doc-name">NITIN KUMAR JHA</h1>
+      <div class="doc-contacts">
+        <span>📞 +91-7739978325</span>
+        <span>✉️ <a href="mailto:nitink89506@gmail.com">nitink89506@gmail.com</a></span>
+        <span>🐙 <a href="https://github.com/chotusky95-cell" target="_blank">github.com/chotusky95-cell</a></span>
+        <span>💼 <a href="https://linkedin.com/in/nitin-kumar-jha-69469b326" target="_blank">linkedin.com/in/nitin-kumar-jha-69469b326</a></span>
+      </div>
+    </header>
+
+    <!-- Education -->
+    <section class="sec-block">
+      <h2 class="sec-heading">Education</h2>
+      <div class="row-flex">
+        <span>Rungta College of Engineering and Technology (Data Science)</span>
+        <span>2024 &ndash; 2028</span>
+      </div>
+      <div class="row-sub">
+        <span>B.Tech, Computer Science &amp; Engineering &mdash; CSVTU</span>
+        <span>Bhilai, Chhattisgarh</span>
+      </div>
+    </section>
+
+    <!-- Technical Skills -->
+    <section class="sec-block">
+      <h2 class="sec-heading">Technical Skills</h2>
+      <ul class="bullet-list">
+        <li><strong>Languages:</strong> Java, Python, SQL, JavaScript, HTML, CSS</li>
+        <li><strong>Data Analysis:</strong> Pandas, NumPy, Matplotlib, Data Cleaning, Data Visualization</li>
+        <li><strong>Database:</strong> MySQL, SQL Queries</li>
+        <li><strong>Web Development:</strong> HTML, CSS, JavaScript, Responsive Web Design</li>
+        <li><strong>Tools:</strong> Git, GitHub, VS Code, Jupyter Notebook</li>
+        <li><strong>Core CS:</strong> Data Structures and Algorithms, OOP, DBMS, Operating Systems, Computer Networks</li>
+      </ul>
+    </section>
+
+    <!-- Projects -->
+    <section class="sec-block">
+      <h2 class="sec-heading">Projects</h2>
+
+      <div class="project-entry">
+        <div class="row-flex">
+          <span>Supply Chain Bottleneck &amp; Efficiency Analyzer</span>
+          <span>Python, Pandas, Data Analysis</span>
+        </div>
+        <div class="row-sub">
+          <a href="https://github.com/chotusky95-cell/Supply-Chain-Bottleneck-Efficiency-Analyzer" target="_blank">GitHub Repository</a>
+        </div>
+        <ul class="bullet-list">
+          <li>Analyzed supply chain datasets to identify operational bottlenecks and inefficiencies.</li>
+          <li>Performed data cleaning, preprocessing, and visualization using Python libraries.</li>
+          <li>Generated insights to improve workflow efficiency and resource utilization.</li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="row-flex">
+          <span>Student Marks Analysis</span>
+          <span>Python, Pandas, Matplotlib</span>
+        </div>
+        <div class="row-sub">
+          <a href="https://github.com/chotusky95-cell/Student-Marks-Analysis" target="_blank">GitHub Repository</a>
+        </div>
+        <ul class="bullet-list">
+          <li>Analyzed student academic performance using statistical techniques.</li>
+          <li>Created visualizations and reports to evaluate subject-wise performance.</li>
+          <li>Derived meaningful insights from educational datasets.</li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="row-flex">
+          <span>Cricket Data Ranking System</span>
+          <span>Python, Data Analysis</span>
+        </div>
+        <div class="row-sub">
+          <a href="https://github.com/chotusky95-cell/Cricket-data-ranking" target="_blank">GitHub Repository</a>
+        </div>
+        <ul class="bullet-list">
+          <li>Developed a ranking system for cricket players based on performance metrics.</li>
+          <li>Processed and analyzed match datasets for comparative evaluation.</li>
+          <li>Applied data-driven techniques to generate rankings.</li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="row-flex">
+          <span>Amazon Clone</span>
+          <span>HTML, CSS, JavaScript</span>
+        </div>
+        <div class="row-sub">
+          <a href="https://github.com/chotusky95-cell/Amazon-Clone" target="_blank">GitHub Repository</a>
+        </div>
+        <ul class="bullet-list">
+          <li>Built a responsive Amazon-inspired e-commerce website interface.</li>
+          <li>Implemented navigation, product sections, and responsive layouts.</li>
+          <li>Improved frontend development skills through UI replication.</li>
+        </ul>
+      </div>
+
+      <div class="project-entry">
+        <div class="row-flex">
+          <span>Crime Data Analysis</span>
+          <span>Python, Pandas, Data Visualization</span>
+        </div>
+        <div class="row-sub">
+          <a href="https://github.com/chotusky95-cell/Crime-Data-Analysis" target="_blank">GitHub Repository</a>
+        </div>
+        <ul class="bullet-list">
+          <li>Explored crime datasets to identify trends and patterns.</li>
+          <li>Created visual reports and statistical summaries for interpretation.</li>
+          <li>Generated insights through data analysis and visualization.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Profiles & Areas of Interest -->
+    <section class="sec-block">
+      <h2 class="sec-heading">Profiles &amp; Areas of Interest</h2>
+      <ul class="bullet-list">
+        <li><strong>GitHub:</strong> <a href="https://github.com/chotusky95-cell" target="_blank">github.com/chotusky95-cell</a></li>
+        <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/nitin-kumar-jha-69469b326" target="_blank">linkedin.com/in/nitin-kumar-jha-69469b326</a></li>
+        <li><strong>Areas of Interest:</strong> Data Analytics, Software Development, Machine Learning, Problem Solving</li>
+      </ul>
+    </section>
+
+    <!-- Certifications -->
+    <section class="sec-block">
+      <h2 class="sec-heading">Certifications</h2>
+      <ul class="bullet-list">
+        <li>Data Science and AI/ML Certification</li>
+        <li>Java Programming Certification</li>
+        <li>Generative AI Fundamentals</li>
+        <li>Problem Solving and Data Structures</li>
+      </ul>
+    </section>
+  </div>
+
+</body>
+</html>

@@ -2,45 +2,6 @@
 //  NITIN KUMAR JHA DYNAMIC 3D PORTFOLIO JAVASCRIPT ENGINE
 // ══════════════════════════════════════════════════════════════════
 
-// Global Modal Functions (Available Everywhere)
-window.openResumeModal = function(e) {
-  if (e && e.preventDefault) e.preventDefault();
-  const modal = document.getElementById('resumeModal');
-  if (modal) {
-    modal.classList.add('active');
-    modal.style.display = 'flex';
-    modal.style.opacity = '1';
-    modal.style.pointerEvents = 'auto';
-    document.body.style.overflow = 'hidden';
-  }
-};
-
-window.closeResumeModal = function(e) {
-  if (e && e.preventDefault) e.preventDefault();
-  const modal = document.getElementById('resumeModal');
-  if (modal) {
-    modal.classList.remove('active');
-    modal.style.display = 'none';
-    modal.style.opacity = '0';
-    modal.style.pointerEvents = 'none';
-    document.body.style.overflow = '';
-  }
-};
-
-window.toggleInlineResume = function(e) {
-  if (e && e.preventDefault) e.preventDefault();
-  const preview = document.getElementById('resumeInlinePreview');
-  const btn = document.getElementById('btnToggleInline');
-  if (preview) {
-    const isShowing = preview.classList.toggle('active');
-    if (btn) {
-      btn.innerHTML = isShowing
-        ? 'Hide Resume Details ▲'
-        : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> View Full Resume';
-    }
-  }
-};
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // ══════════════════════════════════════════════════
@@ -623,36 +584,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderLinkedList();
 
   // ══════════════════════════════════════════════════
-  //  8. RESUME MODAL & PRINT BINDINGS
-  // ══════════════════════════════════════════════════
-  const resumeModal = document.getElementById('resumeModal');
-  const btnOpenResume = document.getElementById('btnOpenResume');
-  const btnCloseResume = document.getElementById('btnCloseResume');
-
-  if (btnOpenResume) {
-    btnOpenResume.addEventListener('click', window.openResumeModal);
-  }
-
-  if (btnCloseResume) {
-    btnCloseResume.addEventListener('click', window.closeResumeModal);
-  }
-
-  if (resumeModal) {
-    resumeModal.addEventListener('click', (e) => {
-      if (e.target === resumeModal) {
-        window.closeResumeModal(e);
-      }
-    });
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && resumeModal && resumeModal.classList.contains('active')) {
-      window.closeResumeModal(e);
-    }
-  });
-
-  // ══════════════════════════════════════════════════
-  //  9. SCROLL INTERSECTION OBSERVERS
+  //  8. SCROLL INTERSECTION OBSERVERS
   // ══════════════════════════════════════════════════
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
@@ -724,10 +656,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   // ══════════════════════════════════════════════════
-  //  10. MAGNETIC BUTTONS
+  //  9. MAGNETIC BUTTONS
   // ══════════════════════════════════════════════════
   document.addEventListener('mousemove', (e) => {
-    const btns = document.querySelectorAll('.btn-p, .btn-s, .btn-resume, .btn-resume-outline, .cbtn, .social-icon, .close-modal');
+    const btns = document.querySelectorAll('.btn-p, .btn-s, .btn-resume-main, .btn-resume-sec, .cbtn, .social-icon, .r-pill');
     btns.forEach((btn) => {
       const rect = btn.getBoundingClientRect();
       const centerX = rect.left + rect.width / 2;
@@ -749,7 +681,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ══════════════════════════════════════════════════
-  //  11. CONTACT FORM SUBMISSION
+  //  10. CONTACT FORM SUBMISSION
   // ══════════════════════════════════════════════════
   const contactForm = document.getElementById('contact-form');
   const submitBtn = document.getElementById('submit-btn');
