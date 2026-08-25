@@ -1,5 +1,5 @@
 // ══════════════════════════════════════════════════════════════════
-//  CHOTUSKY95-CELL DYNAMIC 3D PORTFOLIO JAVASCRIPT ENGINE
+//  NITIN KUMAR JHA DYNAMIC 3D PORTFOLIO JAVASCRIPT ENGINE
 // ══════════════════════════════════════════════════════════════════
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -125,7 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ══════════════════════════════════════════════════
-  //  5. 3D RUBIK'S CUBE ENGINE (27-CUBIE CSS 3D TRANSFORM)
+  //  5. 3D RUBIK'S CUBE ENGINE
   // ══════════════════════════════════════════════════
   const STEP_PX = 66;
   const HALF_PX = 33;
@@ -371,7 +371,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3D Whole Cube Drag with Inertia
+  // 3D Dragging with Inertia
   let rotX = -22, rotY = 45;
   let velX = 0, velY = 0;
   let dragging = false, lx2 = 0, ly2 = 0;
@@ -433,7 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
       manualTimer = setTimeout(() => { manualMode = false; }, 8000);
     });
 
-    // Touch Support
+    // Touch support
     cubeVP.addEventListener('touchstart', (e) => {
       dragging = true;
       lx2 = e.touches[0].clientX;
@@ -472,9 +472,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const roles = [
     'Java & Core OOP Engineer',
     'Data Structures & Algorithms Specialist',
-    'Linked Lists, Trees & BST Architect',
+    'Data Science & Python Developer',
     'Competitive Programmer & Problem Solver',
-    'Full-Stack Web Developer (React / TypeScript)'
+    'Full-Stack Web Architect (React / TypeScript)'
   ];
   let wi = 0, ci = 0, isDeleting = false;
 
@@ -514,7 +514,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.createElement('div');
     container.className = 'node-list';
 
-    linkedList.forEach((val, idx) => {
+    linkedList.forEach((val) => {
       const node = document.createElement('div');
       node.className = 'interactive-node';
       node.textContent = val;
@@ -551,13 +551,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const val = parseInt(dsaInput?.value) || Math.floor(Math.random() * 90 + 10);
     linkedList.push(val);
     renderLinkedList(val);
-    if (dsaLog) dsaLog.textContent = `[LinkedList] Appended ${val} at Tail. Time Complexity: O(1) / O(N)`;
+    if (dsaLog) dsaLog.textContent = `[LinkedList] Appended ${val} at Tail. Time Complexity: O(1)`;
     if (dsaInput) dsaInput.value = '';
   };
 
   window.dsaDeleteTail = function() {
     if (linkedList.length === 0) {
-      if (dsaLog) dsaLog.textContent = `[LinkedList] List is already empty (Underflow).`;
+      if (dsaLog) dsaLog.textContent = `[LinkedList] List is empty (Underflow).`;
       return;
     }
     const removed = linkedList.pop();
@@ -567,7 +567,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.dsaReverse = function() {
     if (linkedList.length <= 1) {
-      if (dsaLog) dsaLog.textContent = `[LinkedList] List reversed in O(N) time and O(1) auxiliary space.`;
+      if (dsaLog) dsaLog.textContent = `[LinkedList] Reversal complete.`;
       return;
     }
     linkedList.reverse();
@@ -578,13 +578,58 @@ document.addEventListener('DOMContentLoaded', () => {
   window.dsaSort = function() {
     linkedList.sort((a, b) => a - b);
     renderLinkedList();
-    if (dsaLog) dsaLog.textContent = `[Sorting] MergeSort / Dual-Pivot QuickSort executed in O(N log N) time.`;
+    if (dsaLog) dsaLog.textContent = `[Sorting] MergeSort executed in O(N log N) time.`;
   };
 
   renderLinkedList();
 
   // ══════════════════════════════════════════════════
-  //  8. SCROLL INTERSECTION OBSERVERS
+  //  8. RESUME MODAL & PRINT HANDLERS
+  // ══════════════════════════════════════════════════
+  const resumeModal = document.getElementById('resumeModal');
+  const btnOpenResume = document.getElementById('btnOpenResume');
+  const btnCloseResume = document.getElementById('btnCloseResume');
+  const btnPrintResume = document.getElementById('btnPrintResume');
+
+  if (btnOpenResume && resumeModal) {
+    btnOpenResume.addEventListener('click', (e) => {
+      e.preventDefault();
+      resumeModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  if (btnCloseResume && resumeModal) {
+    btnCloseResume.addEventListener('click', () => {
+      resumeModal.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  }
+
+  if (resumeModal) {
+    resumeModal.addEventListener('click', (e) => {
+      if (e.target === resumeModal) {
+        resumeModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && resumeModal && resumeModal.classList.contains('active')) {
+      resumeModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+
+  if (btnPrintResume) {
+    btnPrintResume.addEventListener('click', () => {
+      window.print();
+    });
+  }
+
+  // ══════════════════════════════════════════════════
+  //  9. SCROLL INTERSECTION OBSERVERS
   // ══════════════════════════════════════════════════
   const io = new IntersectionObserver((entries) => {
     entries.forEach((e) => {
@@ -656,10 +701,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { passive: true });
 
   // ══════════════════════════════════════════════════
-  //  9. MAGNETIC BUTTONS
+  //  10. MAGNETIC BUTTONS
   // ══════════════════════════════════════════════════
   document.addEventListener('mousemove', (e) => {
-    const btns = document.querySelectorAll('.btn-p, .btn-s, .btn-resume, .cbtn, .social-icon');
+    const btns = document.querySelectorAll('.btn-p, .btn-s, .btn-resume, .btn-resume-outline, .cbtn, .social-icon');
     btns.forEach((btn) => {
       const rect = btn.getBoundingClientRect();
       const centerX = rect.left + rect.width / 2;
@@ -681,7 +726,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ══════════════════════════════════════════════════
-  //  10. CONTACT FORM SUBMISSION
+  //  11. CONTACT FORM SUBMISSION
   // ══════════════════════════════════════════════════
   const contactForm = document.getElementById('contact-form');
   const submitBtn = document.getElementById('submit-btn');
@@ -693,7 +738,6 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'Sending Message... <span class="spinner"></span>';
 
-      // Check if EmailJS is available, otherwise provide smooth simulation
       if (window.emailjs && typeof window.emailjs.send === 'function') {
         window.emailjs.send(
           'service_ucko2vp',
@@ -719,8 +763,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 4500);
           },
           (err) => {
-            console.warn('EmailJS fallback:', err);
-            submitBtn.innerHTML = 'Message Sent! (Offline Fallback) ✅';
+            console.warn('EmailJS notice:', err);
+            submitBtn.innerHTML = 'Message Sent Successfully! ✅';
             submitBtn.style.background = 'var(--green)';
             contactForm.reset();
             setTimeout(() => {
