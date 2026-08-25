@@ -46,7 +46,7 @@ body {
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 9999999;
   transform: translate(-50%, -50%);
   transition: width 0.2s, height 0.2s, border-color 0.2s;
   mix-blend-mode: difference;
@@ -59,7 +59,7 @@ body {
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 9999999;
   transform: translate(-50%, -50%);
 }
 
@@ -1131,7 +1131,7 @@ section {
 }
 
 .resume-box {
-  max-width: 780px;
+  max-width: 820px;
   margin: 0 auto;
   background: rgba(255, 255, 255, 0.025);
   border: 1px solid var(--card-border);
@@ -1250,62 +1250,93 @@ section {
   transform: translateY(-3px);
 }
 
-/* ── RESUME MODAL & SHEET ── */
+/* Inline Expandable Resume Section */
+.resume-inline-preview {
+  margin-top: 36px;
+  text-align: left;
+  background: #ffffff;
+  color: #111118;
+  border-radius: 16px;
+  padding: 36px 40px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  display: none;
+  animation: fadeIn 0.4s ease;
+}
+
+.resume-inline-preview.active {
+  display: block !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── RESUME MODAL VIEWER ── */
 .resume-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.88);
   backdrop-filter: blur(16px);
-  z-index: 10000;
-  display: flex;
+  z-index: 999999;
+  display: none;
   align-items: center;
   justify-content: center;
   padding: 20px;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.25s ease;
 }
 
 .resume-modal.active {
-  opacity: 1;
-  pointer-events: auto;
+  display: flex !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 .resume-modal-content {
   background: #ffffff;
   color: #111118;
-  max-width: 850px;
+  max-width: 860px;
   width: 100%;
   max-height: 90vh;
   border-radius: 18px;
   overflow-y: auto;
   padding: 40px 45px;
-  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.8);
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.9);
   position: relative;
   font-family: 'Space Grotesk', -apple-system, sans-serif;
+  animation: zoomModal 0.3s ease;
+}
+
+@keyframes zoomModal {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
 
 .close-modal {
   position: absolute;
-  top: 20px;
-  right: 22px;
-  width: 36px;
-  height: 36px;
+  top: 18px;
+  right: 20px;
+  width: 38px;
+  height: 38px;
   background: #f1f2f6;
-  border: none;
+  border: 1px solid #dfe4ea;
   border-radius: 50%;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   color: #2f3542;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s;
+  z-index: 10;
 }
 
 .close-modal:hover {
   background: #e74c3c;
   color: #fff;
+  border-color: #e74c3c;
 }
 
 .modal-header-actions {
@@ -1313,19 +1344,21 @@ section {
   justify-content: flex-end;
   gap: 12px;
   margin-bottom: 20px;
+  padding-right: 50px;
 }
 
 .btn-print {
   background: #0984e3;
   color: #fff;
   border: none;
-  padding: 8px 18px;
+  padding: 8px 20px;
   border-radius: 8px;
   font: 600 0.88rem 'Space Grotesk', sans-serif;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  transition: background 0.2s;
 }
 
 .btn-print:hover {
@@ -1341,7 +1374,7 @@ section {
 }
 
 .doc-name {
-  font-size: 1.85rem;
+  font-size: 1.9rem;
   font-weight: 700;
   letter-spacing: 1px;
   color: #000;
@@ -1352,7 +1385,7 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   gap: 16px;
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   color: #2f3542;
   margin-top: 6px;
   font-family: 'JetBrains Mono', monospace;
@@ -1372,7 +1405,7 @@ section {
 }
 
 .doc-sec-title {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 700;
   text-transform: uppercase;
   color: #000;
@@ -1386,7 +1419,8 @@ section {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
-  font-size: 0.94rem;
+  font-size: 0.95rem;
+  color: #111;
 }
 
 .doc-subrow {
@@ -1396,6 +1430,16 @@ section {
   font-size: 0.88rem;
   color: #57606f;
   margin-bottom: 6px;
+}
+
+.doc-subrow a {
+  color: #0984e3;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.doc-subrow a:hover {
+  text-decoration: underline;
 }
 
 .doc-list {
@@ -1410,7 +1454,7 @@ section {
 }
 
 .doc-item {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 /* ── CONTACT ── */
@@ -1645,6 +1689,9 @@ footer strong {
   .resume-modal-content {
     padding: 25px 20px;
   }
+  .resume-inline-preview {
+    padding: 24px 18px;
+  }
 }
 
 @media (max-width: 650px) {
@@ -1666,5 +1713,13 @@ footer strong {
   }
   .dsa-container {
     padding: 24px 16px;
+  }
+  .doc-contacts {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .doc-row, .doc-subrow {
+    flex-direction: column;
+    gap: 2px;
   }
 }

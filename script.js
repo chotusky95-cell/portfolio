@@ -2,6 +2,45 @@
 //  NITIN KUMAR JHA DYNAMIC 3D PORTFOLIO JAVASCRIPT ENGINE
 // ══════════════════════════════════════════════════════════════════
 
+// Global Modal Functions (Available Everywhere)
+window.openResumeModal = function(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  const modal = document.getElementById('resumeModal');
+  if (modal) {
+    modal.classList.add('active');
+    modal.style.display = 'flex';
+    modal.style.opacity = '1';
+    modal.style.pointerEvents = 'auto';
+    document.body.style.overflow = 'hidden';
+  }
+};
+
+window.closeResumeModal = function(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  const modal = document.getElementById('resumeModal');
+  if (modal) {
+    modal.classList.remove('active');
+    modal.style.display = 'none';
+    modal.style.opacity = '0';
+    modal.style.pointerEvents = 'none';
+    document.body.style.overflow = '';
+  }
+};
+
+window.toggleInlineResume = function(e) {
+  if (e && e.preventDefault) e.preventDefault();
+  const preview = document.getElementById('resumeInlinePreview');
+  const btn = document.getElementById('btnToggleInline');
+  if (preview) {
+    const isShowing = preview.classList.toggle('active');
+    if (btn) {
+      btn.innerHTML = isShowing
+        ? 'Hide Resume Details ▲'
+        : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg> View Full Resume';
+    }
+  }
+};
+
 document.addEventListener('DOMContentLoaded', () => {
 
   // ══════════════════════════════════════════════════
@@ -584,49 +623,33 @@ document.addEventListener('DOMContentLoaded', () => {
   renderLinkedList();
 
   // ══════════════════════════════════════════════════
-  //  8. RESUME MODAL & PRINT HANDLERS
+  //  8. RESUME MODAL & PRINT BINDINGS
   // ══════════════════════════════════════════════════
   const resumeModal = document.getElementById('resumeModal');
   const btnOpenResume = document.getElementById('btnOpenResume');
   const btnCloseResume = document.getElementById('btnCloseResume');
-  const btnPrintResume = document.getElementById('btnPrintResume');
 
-  if (btnOpenResume && resumeModal) {
-    btnOpenResume.addEventListener('click', (e) => {
-      e.preventDefault();
-      resumeModal.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
+  if (btnOpenResume) {
+    btnOpenResume.addEventListener('click', window.openResumeModal);
   }
 
-  if (btnCloseResume && resumeModal) {
-    btnCloseResume.addEventListener('click', () => {
-      resumeModal.classList.remove('active');
-      document.body.style.overflow = '';
-    });
+  if (btnCloseResume) {
+    btnCloseResume.addEventListener('click', window.closeResumeModal);
   }
 
   if (resumeModal) {
     resumeModal.addEventListener('click', (e) => {
       if (e.target === resumeModal) {
-        resumeModal.classList.remove('active');
-        document.body.style.overflow = '';
+        window.closeResumeModal(e);
       }
     });
   }
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && resumeModal && resumeModal.classList.contains('active')) {
-      resumeModal.classList.remove('active');
-      document.body.style.overflow = '';
+      window.closeResumeModal(e);
     }
   });
-
-  if (btnPrintResume) {
-    btnPrintResume.addEventListener('click', () => {
-      window.print();
-    });
-  }
 
   // ══════════════════════════════════════════════════
   //  9. SCROLL INTERSECTION OBSERVERS
@@ -704,7 +727,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //  10. MAGNETIC BUTTONS
   // ══════════════════════════════════════════════════
   document.addEventListener('mousemove', (e) => {
-    const btns = document.querySelectorAll('.btn-p, .btn-s, .btn-resume, .btn-resume-outline, .cbtn, .social-icon');
+    const btns = document.querySelectorAll('.btn-p, .btn-s, .btn-resume, .btn-resume-outline, .cbtn, .social-icon, .close-modal');
     btns.forEach((btn) => {
       const rect = btn.getBoundingClientRect();
       const centerX = rect.left + rect.width / 2;
