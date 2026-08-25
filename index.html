@@ -91,7 +91,7 @@
         </p>
         <div class="hero-btns">
           <a href="#projects" class="btn-p">Explore Projects &rarr;</a>
-          <a href="resume.html" target="_blank" class="btn-s">View Resume 📄</a>
+          <a href="#resume" class="btn-s">View Resume 📄</a>
           <a href="#contact" class="btn-s">Get In Touch</a>
         </div>
       </div>
@@ -500,121 +500,181 @@
       <div class="pip"></div>
     </div>
 
-    <!-- ════════ RESUME SHOWCASE SECTION ════════ -->
+    <!-- ════════ RESUME SECTION WITH EMBEDDED RESUME SHEET ════════ -->
     <section id="resume">
       <div class="sec-head up">
         <div class="sec-tag">05 &mdash; Credentials &amp; Resume</div>
-        <h2 class="sec-title">Official <span>Resume &amp; Qualifications</span></h2>
-        <p class="sec-sub">Full academic background, technical competencies, projects &amp; certifications</p>
+        <h2 class="sec-title">Official <span>Resume</span></h2>
+        <p class="sec-sub">Complete curriculum vitae of Nitin Kumar Jha</p>
       </div>
 
-      <div class="resume-showcase up">
-        <!-- Top Banner Header -->
-        <div class="resume-top-banner">
-          <div class="resume-header-info">
-            <h3>NITIN KUMAR <span>JHA</span></h3>
-            <p class="resume-degree">
-              🎓 <strong>B.Tech in Computer Science &amp; Engineering (Data Science)</strong><br />
-              🏫 Rungta College of Engineering and Technology (CSVTU) &bull; 2024 &ndash; 2028 &bull; Bhilai, Chhattisgarh
-            </p>
+      <div class="resume-wrapper-container up">
+        <!-- Action Toolbar -->
+        <div class="resume-top-controls">
+          <div class="resume-control-title">
+            📄 Nitin Kumar Jha &bull; B.Tech CSE (Data Science)
           </div>
-          <div class="resume-top-actions">
-            <a href="resume.html" target="_blank" class="btn-resume-main">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <div class="resume-control-actions">
+            <a href="resume.html" target="_blank" class="btn-ctrl-primary">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                 <polyline points="15 3 21 3 21 9"></polyline>
                 <line x1="10" y1="14" x2="21" y2="3"></line>
               </svg>
-              Open Printable Resume ↗
+              Open in New Tab ↗
             </a>
-            <a href="resume.html" target="_blank" class="btn-resume-sec">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-                <polyline points="7 10 12 15 17 10" />
-                <line x1="12" y1="15" x2="12" y2="3" />
+            <button onclick="window.print()" class="btn-ctrl-secondary">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                <rect x="6" y="14" width="12" height="8"></rect>
               </svg>
               Print / Save PDF
-            </a>
+            </button>
           </div>
         </div>
 
-        <!-- Verified Contact Pills -->
-        <div class="resume-pills">
-          <a href="tel:+917739978325" class="r-pill">📞 +91-7739978325</a>
-          <a href="mailto:nitink89506@gmail.com" class="r-pill">✉️ nitink89506@gmail.com</a>
-          <a href="https://github.com/chotusky95-cell" target="_blank" class="r-pill">🐙 github.com/chotusky95-cell</a>
-          <a href="https://linkedin.com/in/nitin-kumar-jha-69469b326" target="_blank" class="r-pill">💼 linkedin.com/in/nitin-kumar-jha-69469b326</a>
-        </div>
+        <!-- The Clean Embedded Resume Document -->
+        <div class="embedded-resume-sheet">
+          <header class="sheet-header">
+            <h1 class="sheet-name">NITIN KUMAR JHA</h1>
+            <div class="sheet-contacts">
+              <span>📞 +91-7739978325</span>
+              <span>✉️ <a href="mailto:nitink89506@gmail.com">nitink89506@gmail.com</a></span>
+              <span>🐙 <a href="https://github.com/chotusky95-cell" target="_blank">github.com/chotusky95-cell</a></span>
+              <span>💼 <a href="https://linkedin.com/in/nitin-kumar-jha-69469b326" target="_blank">linkedin.com/in/nitin-kumar-jha-69469b326</a></span>
+            </div>
+          </header>
 
-        <!-- Grid of 4 Core Resume Modules -->
-        <div class="resume-grid">
-          <!-- Module 1: Technical Skills -->
-          <div class="r-card">
-            <div class="r-card-title">🛠️ Technical Skills</div>
-            <ul class="r-list">
+          <!-- Education -->
+          <section class="sheet-sec">
+            <h2 class="sheet-sec-title">Education</h2>
+            <div class="sheet-row">
+              <span>Rungta College of Engineering and Technology (Data Science)</span>
+              <span>2024 &ndash; 2028</span>
+            </div>
+            <div class="sheet-subrow">
+              <span>B.Tech, Computer Science &amp; Engineering &mdash; CSVTU</span>
+              <span>Bhilai, Chhattisgarh</span>
+            </div>
+          </section>
+
+          <!-- Technical Skills -->
+          <section class="sheet-sec">
+            <h2 class="sheet-sec-title">Technical Skills</h2>
+            <ul class="sheet-list">
               <li><strong>Languages:</strong> Java, Python, SQL, JavaScript, HTML, CSS</li>
-              <li><strong>Data Analysis:</strong> Pandas, NumPy, Matplotlib, Data Cleaning, Visualization</li>
-              <li><strong>Database:</strong> MySQL, SQL Queries, Schema Design</li>
-              <li><strong>Web Dev:</strong> HTML5, CSS3, JavaScript (ES6+), Responsive UI</li>
+              <li><strong>Data Analysis:</strong> Pandas, NumPy, Matplotlib, Data Cleaning, Data Visualization</li>
+              <li><strong>Database:</strong> MySQL, SQL Queries</li>
+              <li><strong>Web Development:</strong> HTML, CSS, JavaScript, Responsive Web Design</li>
               <li><strong>Tools:</strong> Git, GitHub, VS Code, Jupyter Notebook</li>
+              <li><strong>Core CS:</strong> Data Structures and Algorithms, OOP, DBMS, Operating Systems, Computer Networks</li>
             </ul>
-          </div>
+          </section>
 
-          <!-- Module 2: Core Computer Science -->
-          <div class="r-card">
-            <div class="r-card-title">🧠 Core CS &amp; Algorithms</div>
-            <ul class="r-list">
-              <li><strong>Data Structures:</strong> Linked Lists (Singly/Doubly/Circular), Trees, BSTs</li>
-              <li><strong>Algorithms:</strong> Sorting, Binary Search, Recursion, Two Pointers</li>
-              <li><strong>Software Engineering:</strong> Object-Oriented Programming (OOP)</li>
-              <li><strong>Systems:</strong> DBMS, Operating Systems, Computer Networks</li>
-              <li><strong>Problem Solving:</strong> Competitive Programming &amp; Math Analytics</li>
-            </ul>
-          </div>
+          <!-- Projects -->
+          <section class="sheet-sec">
+            <h2 class="sheet-sec-title">Projects</h2>
 
-          <!-- Module 3: Key Projects Highlight -->
-          <div class="r-card">
-            <div class="r-card-title">🚀 Featured Projects</div>
-            <div class="r-project-item">
-              <div class="r-proj-head">
+            <div class="sheet-project-item">
+              <div class="sheet-row">
                 <span>Subway Surfer Runner Game</span>
-                <span class="r-proj-tech">JS &bull; Canvas &bull; Vercel</span>
+                <span>JavaScript, HTML5 Canvas, Game Engine</span>
               </div>
-              <div class="r-proj-desc">
-                Interactive web runner game with real-time obstacle physics, coin collision, and score multipliers.
+              <div class="sheet-subrow">
+                <span>
+                  <a href="https://game-blue-mu.vercel.app" target="_blank">Live Demo</a> &bull;
+                  <a href="https://github.com/chotusky95-cell/Game" target="_blank">GitHub Repository</a>
+                </span>
               </div>
+              <ul class="sheet-list">
+                <li>Engineered an interactive 2D/3D web runner game featuring responsive keyboard and swipe controls.</li>
+                <li>Implemented real-time collision detection, procedural obstacle generation, coin physics, and dynamic score multipliers.</li>
+                <li>Optimized rendering loops at 60 FPS using RequestAnimationFrame and deployed live on Vercel.</li>
+              </ul>
             </div>
-            <div class="r-project-item">
-              <div class="r-proj-head">
-                <span>Supply Chain Bottleneck Analyzer</span>
-                <span class="r-proj-tech">Python &bull; Pandas</span>
-              </div>
-              <div class="r-proj-desc">
-                Identified operational inefficiencies in supply chains using Python analytics &amp; visualization.
-              </div>
-            </div>
-            <div class="r-project-item">
-              <div class="r-proj-head">
-                <span>Cooperative Gig Services Platform</span>
-                <span class="r-proj-tech">TypeScript &bull; React &bull; Vercel</span>
-              </div>
-              <div class="r-proj-desc">
-                Full-stack community marketplace with scheduling, service booking, and responsive UI.
-              </div>
-            </div>
-          </div>
 
-          <!-- Module 4: Certifications & Interests -->
-          <div class="r-card">
-            <div class="r-card-title">🏆 Certifications &amp; Domains</div>
-            <ul class="r-list">
-              <li><strong>Cert:</strong> Data Science and AI/ML Certification</li>
-              <li><strong>Cert:</strong> Java Programming Certification</li>
-              <li><strong>Cert:</strong> Generative AI Fundamentals</li>
-              <li><strong>Cert:</strong> Problem Solving and Data Structures</li>
-              <li><strong>Interests:</strong> Data Analytics, Software Development, Machine Learning</li>
+            <div class="sheet-project-item">
+              <div class="sheet-row">
+                <span>Supply Chain Bottleneck &amp; Efficiency Analyzer</span>
+                <span>Python, Pandas, Data Analysis</span>
+              </div>
+              <div class="sheet-subrow">
+                <a href="https://github.com/chotusky95-cell/Supply-Chain-Bottleneck-Efficiency-Analyzer" target="_blank">GitHub Repository</a>
+              </div>
+              <ul class="sheet-list">
+                <li>Analyzed supply chain datasets to identify operational bottlenecks and inefficiencies.</li>
+                <li>Performed data cleaning, preprocessing, and visualization using Python libraries.</li>
+                <li>Generated insights to improve workflow efficiency and resource utilization.</li>
+              </ul>
+            </div>
+
+            <div class="sheet-project-item">
+              <div class="sheet-row">
+                <span>Student Marks Analysis</span>
+                <span>Python, Pandas, Matplotlib</span>
+              </div>
+              <div class="sheet-subrow">
+                <a href="https://github.com/chotusky95-cell/Student-Marks-Analysis" target="_blank">GitHub Repository</a>
+              </div>
+              <ul class="sheet-list">
+                <li>Analyzed student academic performance using statistical techniques.</li>
+                <li>Created visualizations and reports to evaluate subject-wise performance.</li>
+                <li>Derived meaningful insights from educational datasets.</li>
+              </ul>
+            </div>
+
+            <div class="sheet-project-item">
+              <div class="sheet-row">
+                <span>Amazon Clone</span>
+                <span>HTML, CSS, JavaScript</span>
+              </div>
+              <div class="sheet-subrow">
+                <a href="https://github.com/chotusky95-cell/Amazon-Clone" target="_blank">GitHub Repository</a>
+              </div>
+              <ul class="sheet-list">
+                <li>Built a responsive Amazon-inspired e-commerce website interface.</li>
+                <li>Implemented navigation, product sections, and responsive layouts.</li>
+                <li>Improved frontend development skills through UI replication.</li>
+              </ul>
+            </div>
+
+            <div class="sheet-project-item">
+              <div class="sheet-row">
+                <span>Crime Data Analysis</span>
+                <span>Python, Pandas, Data Visualization</span>
+              </div>
+              <div class="sheet-subrow">
+                <a href="https://github.com/chotusky95-cell/Crime-Data-Analysis" target="_blank">GitHub Repository</a>
+              </div>
+              <ul class="sheet-list">
+                <li>Explored crime datasets to identify trends and patterns.</li>
+                <li>Created visual reports and statistical summaries for interpretation.</li>
+                <li>Generated insights through data analysis and visualization.</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Profiles & Areas of Interest -->
+          <section class="sheet-sec">
+            <h2 class="sheet-sec-title">Profiles &amp; Areas of Interest</h2>
+            <ul class="sheet-list">
+              <li><strong>GitHub:</strong> <a href="https://github.com/chotusky95-cell" target="_blank">github.com/chotusky95-cell</a></li>
+              <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/nitin-kumar-jha-69469b326" target="_blank">linkedin.com/in/nitin-kumar-jha-69469b326</a></li>
+              <li><strong>Areas of Interest:</strong> Data Analytics, Software Development, Machine Learning, Problem Solving</li>
             </ul>
-          </div>
+          </section>
+
+          <!-- Certifications -->
+          <section class="sheet-sec">
+            <h2 class="sheet-sec-title">Certifications</h2>
+            <ul class="sheet-list">
+              <li>Data Science and AI/ML Certification</li>
+              <li>Java Programming Certification</li>
+              <li>Generative AI Fundamentals</li>
+              <li>Problem Solving and Data Structures</li>
+            </ul>
+          </section>
         </div>
       </div>
     </section>
@@ -683,7 +743,7 @@
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
             <rect x="2" y="9" width="4" height="12"></rect>
-            <circle cx="4" r="2"></circle>
+            <circle cx="4" cy="4" r="2"></circle>
           </svg>
         </a>
         <a

@@ -72,8 +72,7 @@ body {
 
 body:has(a:hover) #cur,
 body:has(button:hover) #cur,
-body:has(.interactive-node:hover) #cur,
-body:has(.r-card:hover) #cur {
+body:has(.interactive-node:hover) #cur {
   width: 52px;
   height: 52px;
   border-color: var(--orange);
@@ -1129,247 +1128,196 @@ section {
 .p2 .proj-f { border-top: 3px solid var(--yellow); }
 .p3 .proj-f { border-top: 3px solid var(--green); }
 
-/* ── RESUME SHOWCASE (PROPER DARK THEME GRID) ── */
+/* ── RESUME SECTION WITH EMBEDDED RESUME SHEET ── */
 #resume {
   background: var(--bg2);
 }
 
-.resume-showcase {
-  max-width: 1060px;
+.resume-wrapper-container {
+  max-width: 900px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.025);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 28px;
-  padding: 44px 40px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6);
-  text-align: left;
 }
 
-.resume-showcase::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--red), var(--orange), var(--yellow), var(--cyan));
-}
-
-.resume-top-banner {
+.resume-top-controls {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding-bottom: 26px;
-  margin-bottom: 28px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 16px 24px;
+  margin-bottom: 24px;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 16px;
 }
 
-.resume-header-info h3 {
-  font-size: 2.1rem;
+.resume-control-title {
+  font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: -0.5px;
-  color: #fff;
-  margin-bottom: 6px;
+  color: var(--yellow);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.resume-header-info h3 span {
-  background: linear-gradient(135deg, var(--red), var(--yellow));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.resume-degree {
-  font-size: 0.95rem;
-  color: var(--dim);
-  line-height: 1.6;
-}
-
-.resume-top-actions {
+.resume-control-actions {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
 }
 
-.btn-resume-main {
+.btn-ctrl-primary {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
+  padding: 10px 20px;
   background: linear-gradient(135deg, var(--red), var(--orange));
   color: #fff;
   border: none;
-  border-radius: 12px;
-  font: 600 0.95rem 'Space Grotesk', sans-serif;
+  border-radius: 10px;
+  font: 600 0.9rem 'Space Grotesk', sans-serif;
   text-decoration: none;
   cursor: pointer;
   transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 0 25px rgba(255, 88, 0, 0.35);
+  box-shadow: 0 0 20px rgba(255, 88, 0, 0.35);
 }
 
-.btn-resume-main:hover {
+.btn-ctrl-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 35px rgba(255, 88, 0, 0.55);
+  box-shadow: 0 6px 30px rgba(255, 88, 0, 0.55);
 }
 
-.btn-resume-sec {
+.btn-ctrl-secondary {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 20px;
+  padding: 10px 18px;
   background: rgba(255, 255, 255, 0.05);
   color: var(--text);
   border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 12px;
-  font: 600 0.95rem 'Space Grotesk', sans-serif;
+  border-radius: 10px;
+  font: 600 0.9rem 'Space Grotesk', sans-serif;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.2s;
 }
 
-.btn-resume-sec:hover {
+.btn-ctrl-secondary:hover {
   border-color: var(--yellow);
   color: var(--yellow);
   background: rgba(255, 213, 0, 0.08);
   transform: translateY(-2px);
 }
 
-/* Contact Pills */
-.resume-pills {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 28px;
-}
-
-.r-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 7px 16px;
-  border-radius: 100px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  font: 500 0.84rem 'JetBrains Mono', monospace;
-  color: var(--text);
-  text-decoration: none;
-  transition: all 0.2s;
-}
-
-.r-pill:hover {
-  border-color: var(--yellow);
-  color: var(--yellow);
-  background: rgba(255, 213, 0, 0.08);
-}
-
-/* Resume Grid 2x2 */
-.resume-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+/* The Crisp White Resume Sheet Document */
+.embedded-resume-sheet {
+  background: #ffffff;
+  color: #111118;
+  border-radius: 16px;
+  padding: 50px 55px;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6);
   text-align: left;
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.r-card {
-  background: var(--card-bg);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 18px;
-  padding: 24px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+.sheet-header {
+  text-align: center;
+  border-bottom: 2px solid #222;
+  padding-bottom: 14px;
+  margin-bottom: 20px;
 }
 
-.r-card:hover {
-  border-color: rgba(255, 213, 0, 0.35);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-  transform: translateY(-3px);
-}
-
-.r-card-title {
-  font-size: 1.08rem;
+.sheet-name {
+  font-size: 2.1rem;
   font-weight: 700;
-  color: var(--yellow);
-  margin-bottom: 16px;
+  letter-spacing: 0.5px;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.sheet-contacts {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  padding-bottom: 10px;
-}
-
-.r-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-}
-
-.r-list li {
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
   font-size: 0.88rem;
-  color: var(--dim);
-  line-height: 1.65;
+  color: #444;
+  margin-top: 8px;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.sheet-contacts a {
+  color: #0051a2;
+  text-decoration: none;
+}
+
+.sheet-contacts a:hover {
+  text-decoration: underline;
+}
+
+.sheet-sec {
+  margin-bottom: 18px;
+}
+
+.sheet-sec-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
   margin-bottom: 10px;
-  position: relative;
-  padding-left: 20px;
-  text-align: left;
+  letter-spacing: 0.5px;
 }
 
-.r-list li:last-child {
-  margin-bottom: 0;
-}
-
-.r-list li::before {
-  content: '▸';
-  position: absolute;
-  left: 0;
-  color: var(--orange);
-  font-size: 1.1rem;
-  line-height: 1.4;
-}
-
-.r-list li strong {
-  color: #fff;
-  font-weight: 600;
-}
-
-.r-project-item {
-  margin-bottom: 14px;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
-  padding-bottom: 12px;
-  text-align: left;
-}
-
-.r-project-item:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-
-.r-proj-head {
+.sheet-row {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  font-size: 0.95rem;
   font-weight: 600;
-  font-size: 0.92rem;
-  color: #fff;
+  color: #111;
+}
+
+.sheet-subrow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  font-style: italic;
+  color: #555;
+  margin-bottom: 6px;
+}
+
+.sheet-subrow a {
+  color: #0051a2;
+  text-decoration: none;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.sheet-subrow a:hover {
+  text-decoration: underline;
+}
+
+.sheet-list {
+  padding-left: 20px;
+  font-size: 0.88rem;
+  color: #333;
+}
+
+.sheet-list li {
   margin-bottom: 4px;
+  line-height: 1.55;
+  list-style: disc;
 }
 
-.r-proj-tech {
-  font-size: 0.78rem;
-  color: var(--cyan);
-  font-family: 'JetBrains Mono', monospace;
-  font-weight: normal;
+.sheet-list strong {
+  color: #111;
 }
 
-.r-proj-desc {
-  font-size: 0.84rem;
-  color: var(--dim);
-  line-height: 1.5;
+.sheet-project-item {
+  margin-bottom: 14px;
 }
 
 /* ── CONTACT ── */
@@ -1546,9 +1494,6 @@ footer strong {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .resume-grid {
-    grid-template-columns: 1fr;
-  }
 }
 
 @media (max-width: 900px) {
@@ -1604,12 +1549,16 @@ footer strong {
   .nav-links a {
     font-size: 1.4rem;
   }
-  .resume-showcase {
-    padding: 30px 20px;
+  .embedded-resume-sheet {
+    padding: 30px 22px;
   }
-  .resume-top-banner {
+  .sheet-contacts {
     flex-direction: column;
-    align-items: flex-start;
+    gap: 6px;
+  }
+  .sheet-row, .sheet-subrow {
+    flex-direction: column;
+    gap: 2px;
   }
 }
 
@@ -1629,5 +1578,9 @@ footer strong {
   }
   .dsa-container {
     padding: 24px 16px;
+  }
+  .resume-top-controls {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
